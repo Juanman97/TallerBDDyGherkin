@@ -7,16 +7,16 @@ Feature: Numero de digitos de la contraseña de una cuenta de ahorros
     para acceder a mi cuenta de ahorros
     
 Scenario: Crear contraseña
-    Given quiero crear una contraseña de mi cuenta de ahorros
-    When la contraseña seleccionada sea 1356
+    Given que el usuario define como contraseña los digitos 1356
+    When el usuario ingresa la contraseña
     Then la contraseña sera valida
 
 Scenario: Crear contraseña
-    Given quiero crear una contraseña de mi cuenta de ahorros
-    When la contraseña seleccionada sea 194
-    Then la contraseña será invalida
+    Given que el usuario define como contraseña los digitos 194
+    When el usuario ingresa la contraseña
+    Then la contraseña sera invalida
 
 Scenario: Crear contraseña
-    Given quiero crear una contraseña de mi cuenta de ahorros
-    When la contraseña seleccionada sea 19421
+    Given que el usuario define como contraseña 19425
+    When el usuario ingresa la contraseña
     Then la contraseña sera invalida
